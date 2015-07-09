@@ -71,22 +71,26 @@ public class MyUI extends UI {
             @Override
             public void buttonClick(ClickEvent clickEvent) {
                 layoutRight.addComponent(label);
-
+                label2.setVisible(false);
+                label3.setVisible(false);
             }
         });
 
         button2.addClickListener(new Button.ClickListener(){
-
             @Override
             public void buttonClick(ClickEvent clickEvent) {
+                label.setVisible(false);
+                label3.setVisible(false);
                 layoutRight.addComponent(new MyContacts());
-
             }
         });
 
         button3.addClickListener((new Button.ClickListener() {
             @Override
             public void buttonClick(ClickEvent clickEvent) {
+                label.setVisible(false);
+                label2.setVisible(false);
+
                 layoutRight.addComponent(label3);
             }
         }));
